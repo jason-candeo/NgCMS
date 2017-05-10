@@ -1,28 +1,88 @@
-# NgCMS
+# ng-seed/universal
+> Please support this project by simply putting a Github star. Share this library with friends on Twitter and everywhere else you can.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+**`ng-seed/spa`** is a seed project for Angular Universal apps following the common patterns and [best practices](https://angular.io/styleguide) in file and application organization, providing the following features:
 
-## Development server
+- Ready-to-go build system using [gulp] and [Webpack] for working with [TypeScript].
+- Adjustable build configuration via `json` file (`./config/build-config.json`).
+- Production and development modes.
+- [Webpack DLL]s to speed up development builds.
+- [AoT compilation] for rapid page loads on production builds (*using [@ngtools/webpack]*).
+- Tree-shaking the production builds with [fulls1z3/webpack].
+- Hot Module Replacement with [Webpack] and [webpack-hot-middleware].
+- Both inline and external SCSS compilation.
+- Lazy loading of modules.
+- Uses [@ngx-config] for configuration management.
+- Uses [@ngx-cache] for caching.
+- Uses [@ngx-translate] and [@ngx-i18n-router] for i18n support.
+- Uses [@ngx-meta] for SEO.
+- ~Unit tests with [Jasmine] and [Karma], including code coverage via [Istanbul].~
+- ~End-to-end tests with [Protractor].~
+- [angular-tslint-rules] as configuration preset for [TSLint] and [codelyzer].
+- Managing the type definitions using @types.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> Built with `@angular v4.1.0`, bundled with `gulp v4.0` and `webpack v2.5.0`.
 
-## Code scaffolding
+You can find the live app [here](https://ng-seed-universal.azurewebsites.net).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Prerequisites
+Packages in this seed project depend on `@angular v4.0.0`. Older versions contain outdated dependencies, might produce errors.
 
-## Build
+Also, please ensure that you are using **`Typescript v2.1.6`** or higher.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Installing
+```
+# clone the repo
+git clone https://github.com/ng-seed/universal.git
+cd universal-example-app
 
-## Running unit tests
+# use npm (or yarn) to install the dependencies
+npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# dev build (SPA / lean Angular)
+npm run build:spa-dev
+# prod build (SPA / lean Angular)
+npm run build:spa-prod
 
-## Running end-to-end tests
+# start the server (SPA / lean Angular)
+npm run serve:spa
+# start the server (SPA / lean Angular, with HMR support)
+npm run serve:spa-hmr
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+# dev build (Universal)
+npm run build:universal-dev
+# prod build (Universal)
+npm run build:universal-prod
 
-## Further help
+# start the server (Angular Universal)
+npm run serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Navigate to `http://localhost:1337` for **lean Angular** (*client-side rendering*) and `http://localhost:8000` for **Angular Universal** (*server-side rendering*) in your browser.
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2017 [Burak Tasci]
+
+[gulp]: http://gulpjs.com
+[Webpack]: http://webpack.github.io
+[TypeScript]: https://github.com/Microsoft/TypeScript
+[Webpack DLL]: https://robertknight.github.io/posts/webpack-dll-plugins
+[AoT compilation]: https://angular.io/docs/ts/latest/cookbook/aot-compiler.html
+[@ngtools/webpack]: https://www.npmjs.com/package/@ngtools/webpack
+[fulls1z3/webpack]: https://github.com/fulls1z3/webpack
+[webpack-hot-middleware]: https://github.com/glenjamin/webpack-hot-middleware
+[@ngx-config]: https://github.com/ngx-config/core
+[@ngx-cache]: https://github.com/ngx-cache/core
+[@ngx-translate]: https://github.com/ngx-translate/core
+[@ngx-i18n-router]: https://github.com/ngx-i18n-router/core
+[@ngx-meta]: https://github.com/ngx-meta/core
+[Jasmine]: https://jasmine.github.io
+[Karma]: https://karma-runner.github.io
+[Istanbul]: https://github.com/webpack-contrib/istanbul-instrumenter-loader
+[Protractor]: http://www.protractortest.org
+[angular-tslint-rules]: https://github.com/fulls1z3/angular-tslint-rules
+[TSLint]: https://github.com/palantir/tslint
+[codelyzer]: https://github.com/mgechev/codelyzer
+[Burak Tasci]: http://www.buraktasci.com
