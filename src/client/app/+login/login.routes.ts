@@ -2,17 +2,17 @@
 import { Routes } from '@angular/router';
 
 // components
-import { HomeComponent } from './home.component';
+import { LoginComponent } from './login.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: LoginComponent,
     data: {
       meta: {
-        title: 'PUBLIC.HOME.PAGE_TITLE',
+        title: 'PUBLIC.LOGIN.PAGE_TITLE',
         override: true,
-        description: 'PUBLIC.HOME.META_DESCRIPTION'
+        description: 'PUBLIC.LOGIN.META_DESCRIPTION'
       }
     }
   }

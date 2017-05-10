@@ -4,6 +4,7 @@ import { Http, HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 // import { RouterModule, Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // libs
 import { HttpTransferModule } from '@ngx-universal/state-transfer';
@@ -22,7 +23,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // routes & components
 import { routes } from './app.routes';
 import { AppComponent } from './app.component';
-import { ChangeLanguageComponent } from './change-language.component';
+import { ChangeLanguageComponent } from './change-language.component'; 
 
 // for AoT compilation
 export function configFactory(platformId: any, http: Http): ConfigLoader {
@@ -64,6 +65,7 @@ export function translateFactory(platformId: any, http: Http): TranslateLoader {
     HttpTransferModule.forRoot(),
     RouterModule.forRoot(routes),
     HttpModule,
+    BrowserAnimationsModule,
     CacheModule.forRoot(),
     ConfigModule.forRoot({
       provide: ConfigLoader,

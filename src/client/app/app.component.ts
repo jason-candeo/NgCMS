@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title = 'ng-seed (universal) works!';
     const defaultLanguage = this.config.getSettings('i18n.defaultLanguage');
 
     // add available languages & set default language

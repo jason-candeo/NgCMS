@@ -13,11 +13,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: './+home/home.module#HomeModule'
-      },
-      {
-        path: 'about',
-        loadChildren: './+about/about.module#AboutModule'
+        loadChildren: './+login/login.module#LoginModule'
       }
     ],
     canActivateChild: [MetaGuard],
